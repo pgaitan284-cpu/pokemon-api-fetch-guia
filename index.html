@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía Interactiva: API Fetch & PokéAPI</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>⚡ Guía Interactiva: API Fetch en JavaScript &amp; PokéAPI</h1>
+    <p>Diseño de Sistemas de Internet — Semana 11 · pgaitan284-cpu</p>
+  </header>
+
+  <!-- 1. LABORATORIO DE PETICIONES EN VIVO -->
+  <section class="card">
+    <h2>🧪 Laboratorio de Peticiones en Vivo</h2>
+
+    <div class="controls">
+      <input type="text" id="inputPokemon" placeholder="Escribe un Pokémon (ej. pikachu)" value="pikachu">
+      <button id="btnBuscar">Consultar</button>
+      <button id="btnAleatorio" class="ghost">🎲 Aleatorio</button>
+    </div>
+
+    <div class="chips" id="chipsPokemon"></div>
+
+    <!-- 2. MEDICIÓN DE RENDIMIENTO -->
+    <div class="metrics" id="metricas">
+      <div class="metric"><span>Estado HTTP</span><strong id="mStatus">—</strong></div>
+      <div class="metric"><span>Latencia</span><strong id="mLatencia">—</strong></div>
+      <div class="metric"><span>Content-Type</span><strong id="mTipo">—</strong></div>
+    </div>
+  </section>
+
+  <!-- 3. DOBLE IMPLEMENTACIÓN -->
+  <section class="card">
+    <h2>🔀 Doble Implementación</h2>
+    <p class="hint">Ambos botones consultan el mismo Pokémon; cambia solo la sintaxis.</p>
+    <div class="controls">
+      <button id="btnAsync">Consultar con async / await</button>
+      <button id="btnPromesa" class="ghost">Consultar con .then() / .catch()</button>
+    </div>
+  </section>
+
+  <!-- 4. RENDERIZADO DINÁMICO -->
+  <section class="card">
+    <h2>🃏 Renderizado Dinámico</h2>
+    <div id="contenedorCartas" class="grid-cartas">
+      <p class="hint">Aquí aparecerán las tarjetas de los Pokémon consultados.</p>
+    </div>
+  </section>
+
+  <!-- 5. VISOR DE CÓDIGO & JSON -->
+  <section class="card">
+    <h2>🔍 Visor de Código &amp; JSON</h2>
+    <div class="tabs">
+      <button class="tab active" data-tab="json">Respuesta JSON</button>
+      <button class="tab" data-tab="codigo">Código JavaScript</button>
+    </div>
+    <pre id="panelJSON" class="panel active"><code>// Esperando consulta...</code></pre>
+    <pre id="panelCodigo" class="panel"><code id="codigoEjecutado">// Esperando consulta...</code></pre>
+  </section>
+
+  <footer>
+    © 2026 — Diseño de Sistemas de Internet | Universidad Nacional de Ingeniería
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
